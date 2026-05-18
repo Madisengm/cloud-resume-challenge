@@ -5,7 +5,7 @@ const cosmos = new CosmosDbService();
 
 const ALLOWED_ORIGINS = [
     "http://localhost:4200",
-    "https://your-app.azurestaticapps.net", // ← replace after deployment
+    "https://black-sky-08599bc03.7.azurestaticapps.net",
 ];
 
 export async function visitorCounter(
