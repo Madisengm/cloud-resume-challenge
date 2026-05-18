@@ -10,23 +10,18 @@ import { VisitorCounter } from "./shared/visitor-counter/visitor-counter";
 })
 export class App {
 
-  // ─── Services ─────────────────────────────────────────────────────────────
   private apiService = inject(ApiService);
 
-  // ─── Constants ────────────────────────────────────────────────────────────
   private readonly sections = ['home', 'about', 'resume'];
   private readonly HEADER_OFFSET = 88;
 
-  // ─── State ────────────────────────────────────────────────────────────────
   activeSection = signal<string>('home');
   visitorCount = signal<number | null>(null);
 
-  // ─── Lifecycle ────────────────────────────────────────────────────────────
   ngOnInit(): void {
     this.loadVisitorCount();
   }
 
-  // ─── Scroll tracking ──────────────────────────────────────────────────────
   @HostListener('window:scroll')
   onScroll(): void {
     const scrollY = window.scrollY + this.HEADER_OFFSET + 10;
@@ -38,7 +33,6 @@ export class App {
     }
   }
 
-  // ─── Scroll actions ───────────────────────────────────────────────────────
   scrollAction(direction: 'up' | 'down'): void {
     const idx = this.sections.indexOf(this.activeSection());
     const targetIdx = direction === 'down'
@@ -54,7 +48,6 @@ export class App {
     window.scrollTo({ top, behavior: 'smooth' });
   }
 
-  // ─── API ──────────────────────────────────────────────────────────────────
   private loadVisitorCount(): void {
     this.apiService.getVisitorCount().subscribe({
       next: (count) => this.visitorCount.set(count),
@@ -65,7 +58,6 @@ export class App {
     });
   }
 
-  // ─── Profile Data ─────────────────────────────────────────────────────────
   readonly profileData = {
     imageSrc: 'assets/images/profile-pic.jpg',
 
