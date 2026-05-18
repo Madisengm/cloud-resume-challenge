@@ -69,14 +69,10 @@ export class App {
   readonly profileData = {
     imageSrc: 'assets/images/profile-pic.jpg',
 
-    profileSummary: `I thrive on engineering scalable, cloud-native solutions, specializing
-    in modern Frontend development and optimizing the user experience within distributed
-    environments. I leverage robust architectural principles to deliver high-performance,
-    responsive UIs, ensuring maximum stability and client success through advanced Level 2
-    operational support. My collaborative approach focuses on integrating seamless,
-    performance-tuned UI solutions across the application lifecycle, driving business value
-    by migrating and resolving complex issues at scale.`,
-
+    profileSummary: `Security-focused Frontend Engineer specializing in Angular (v17/18+), TypeScript, and Azure serverless architectures. 
+                    Experienced in designing and developing secure, intuitive self-service web interfaces for workflow-driven enterprise applications. 
+                    Strong background in secure coding practices, state management optimization using Angular Signals, and cloud-native CI/CD pipelines. 
+                    Combines frontend engineering expertise with Level 2 production support experience to build resilient, scalable, and performance-optimized web applications.`,
     education: [
       {
         institution: 'IIE ROSEBANK COLLEGE',
@@ -100,17 +96,12 @@ export class App {
         title: 'Developer Support Engineer',
         years: '2023 - PRESENT',
         responsibilities: [
-          'Designed and developed scalable Angular components and micro frontends.',
-          'Integrated RESTful APIs with backend systems.',
-          'Optimized app performance using lazy loading and OnPush change detection.',
-          'Implemented CI/CD pipelines with GitHub Actions for automated deployments.',
-          'Collaborated with cross-functional teams to deliver user-focused web apps.',
-          'Implemented translation and logging frameworks.',
+          'I orchestrate the end-to-end technical architecture and business workflows for enterprise-grade SaaS and Kiosk ecosystems. My role involves designing the full-lifecycle data flow—from hardware-level user interaction to backend integration—ensuring the system is scalable, performant, and globally accessible.',
         ],
         skills: [
           'Angular', 'TypeScript', 'TailwindCSS', 'Firebase', 'Azure Functions',
           'REST APIs', 'RxJS', 'SignalR', 'Application Insights', 'GitHub Actions',
-          'Figma', 'Postman', 'Cypress', 'Jasmine/Karma', 'AnyDesk', 'BeyondTrust',
+          'Figma', 'Postman', 'Cypress', 'Jasmine/Karma', 'Azure SWA', 'System Architecture',
         ],
       },
       {
