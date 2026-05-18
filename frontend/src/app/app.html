@@ -1,0 +1,121 @@
+<header class="fixed top-0 w-full z-50 py-6 px-12 text-white bg-black">
+  <nav class="flex justify-center space-x-8">
+    <a (click)="smoothScrollTo('home')"
+       [class.text-yellow-300]="activeSection() === 'home'"
+       class="uppercase hover:text-gray-400 transition-colors cursor-pointer">Home</a>
+    <a (click)="smoothScrollTo('about')"
+       [class.text-yellow-300]="activeSection() === 'about'"
+       class="uppercase hover:text-gray-400 transition-colors cursor-pointer">About</a>
+    <a (click)="smoothScrollTo('resume')"
+       [class.text-yellow-300]="activeSection() === 'resume'"
+       class="uppercase hover:text-gray-400 transition-colors cursor-pointer">Resume</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center bg-black text-white relative">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+      Hi, I'm <span class="text-[#FFDB58]">Mahlatse</span>
+    </h1>
+    <p class="text-gray-400 text-lg md:text-2xl mb-6 font-light tracking-wide">
+      Angular Developer • Level 2 Support Engineer • Aspiring Solutions Architect
+    </p>
+
+    <app-visitor-counter [count]="visitorCount()" />
+
+    <div class="flex space-x-6 mt-10">
+      <a (click)="smoothScrollTo('about')"
+         class="border border-[#FFDB58] text-[#FFDB58] px-6 py-3 rounded-full hover:bg-[#FFDB58] hover:text-black transition cursor-pointer">
+        Get to know me
+      </a>
+      <a href="assets/CV.pdf" download
+         class="border border-gray-400 px-6 py-3 rounded-full text-gray-300 hover:bg-gray-700 transition">
+        Download Resume
+      </a>
+    </div>
+
+    <button (click)="scrollAction('down')"
+      class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white text-black shadow-lg flex items-center justify-center hover:bg-[#FFDB58] transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="flex items-center justify-center bg-white text-black p-8">
+    <div class="max-w-4xl w-full flex flex-col md:flex-row items-center md:items-start justify-center">
+      <div class="w-full md:w-1/3 flex justify-center mb-8 md:mb-0 md:pr-8">
+        <img [src]="profileData.imageSrc"
+             class="w-40 h-40 rounded-full object-cover border-4 border-gray-200 shadow-md" />
+      </div>
+      <div class="w-full md:w-2/3">
+        <h3 class="text-4xl font-bold text-black mb-4 border-b-2 border-black pb-2">About Me</h3>
+        <p class="text-black leading-relaxed text-lg">{{ profileData.profileSummary }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="min-h-screen bg-gray-800 text-white p-8 md:p-16 relative">
+    <div class="max-w-4xl mx-auto">
+
+      <h3 class="text-2xl font-bold tracking-wide mb-8 border-b border-gray-600 pb-2 uppercase">
+        Education & Certifications
+      </h3>
+
+      @for (edu of profileData.education; track edu.institution) {
+        <div class="mb-8">
+          <h4 class="text-lg font-semibold">{{ edu.institution }}</h4>
+          <p class="text-gray-400 text-sm italic">{{ edu.degree || edu.certificate }}</p>
+          <p class="text-gray-500 text-xs mt-1">{{ edu.years }}</p>
+        </div>
+      }
+
+      <hr class="border-gray-700 my-10" />
+
+      <h3 class="text-2xl font-bold tracking-wide mb-8 border-b border-gray-600 pb-2 uppercase">
+        Work Experience
+      </h3>
+
+      @for (job of profileData.workExperience; track job.company) {
+        <div class="mb-10">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+            <div>
+              <h4 class="text-lg font-semibold">{{ job.company }}</h4>
+              <p class="text-gray-400 italic text-sm">{{ job.title }}</p>
+            </div>
+            <span class="text-gray-500 text-xs mt-1 md:mt-0">{{ job.years }}</span>
+          </div>
+
+          <ul class="list-disc pl-5 text-gray-300 text-sm mt-2 space-y-1">
+            @for (r of job.responsibilities; track r) {
+              <li>{{ r }}</li>
+            }
+          </ul>
+
+          <div class="mt-4">
+            <p class="text-[#FFDB58] text-xs font-semibold uppercase mb-2">Tools & Technologies</p>
+            <div class="flex flex-wrap gap-2">
+              @for (skill of job.skills; track skill) {
+                <span class="bg-[#FFDB58]/10 text-[#FFDB58] border border-[#FFDB58]/30 px-3 py-1 text-xs rounded-full font-medium hover:bg-[#FFDB58]/20 transition-colors">
+                  {{ skill }}
+                </span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <button (click)="scrollAction('up')"
+      class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white text-black shadow-lg flex items-center justify-center hover:bg-gray-200 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+  </section>
+
+</main>
