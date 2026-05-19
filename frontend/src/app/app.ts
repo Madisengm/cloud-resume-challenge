@@ -61,10 +61,16 @@ export class App {
   readonly profileData = {
     imageSrc: 'assets/images/profile-pic.jpg',
 
-    profileSummary: `Security-focused Frontend Engineer specializing in Angular (v17/18+), TypeScript, and Azure serverless architectures. 
-                    Experienced in designing and developing secure, intuitive self-service web interfaces for workflow-driven enterprise applications. 
-                    Strong background in secure coding practices, state management optimization using Angular Signals, and cloud-native CI/CD pipelines. 
-                    Combines frontend engineering expertise with Level 2 production support experience to build resilient, scalable, and performance-optimized web applications.`,
+    profileSummary:
+      `
+        Frontend-focused Software Engineer specialising in Angular (v17/18+), 
+        TypeScript, and Azure serverless architectures. I design and scaffold full-lifecycle 
+        web applications — from component architecture and state management to CI/CD pipelines 
+        and cloud-native API integration. Experienced in building secure, enterprise-grade SaaS 
+        and kiosk ecosystems where I own the end-to-end technical architecture, from hardware 
+        interaction to backend integration. I combine deep frontend engineering with Level 2 
+        production support expertise to deliver resilient, performance-optimised systems at scale.
+      `,
     education: [
       {
         institution: 'IIE ROSEBANK COLLEGE',
@@ -85,15 +91,21 @@ export class App {
     workExperience: [
       {
         company: 'Verisec SA',
-        title: 'Developer Support Engineer',
+        title: 'Frontend Engineer & Developer Support',
         years: '2023 - PRESENT',
         responsibilities: [
-          'I orchestrate the end-to-end technical architecture and business workflows for enterprise-grade SaaS and Kiosk ecosystems. My role involves designing the full-lifecycle data flow—from hardware-level user interaction to backend integration—ensuring the system is scalable, performant, and globally accessible.',
+          'Architected and scaffolded enterprise Angular applications from the ground up, owning component structure, routing, state management, and API integration.',
+          'Designed end-to-end data flows for SaaS and kiosk ecosystems — from hardware-level user interaction through to Azure serverless backend services.',
+          'Built and maintained CI/CD pipelines using GitHub Actions for automated testing and deployment to Azure Static Web Apps.',
+          'Implemented Angular Signals and OnPush change detection strategies to optimise rendering performance across high-frequency UI workflows.',
+          'Integrated Azure Functions, SignalR, and Application Insights into production Angular applications.',
+          'Led Level 2 production support — diagnosing and resolving critical frontend and integration issues in live enterprise environments.',
         ],
         skills: [
-          'Angular', 'TypeScript', 'TailwindCSS', 'Firebase', 'Azure Functions',
-          'REST APIs', 'RxJS', 'SignalR', 'Application Insights', 'GitHub Actions',
-          'Figma', 'Postman', 'Cypress', 'Jasmine/Karma', 'Azure SWA', 'System Architecture',
+          'Angular', 'TypeScript', 'TailwindCSS', 'Azure Functions',
+          'Azure Static Web Apps', 'Cosmos DB', 'SignalR', 'Application Insights',
+          'REST APIs', 'RxJS', 'GitHub Actions', 'Figma',
+          'Postman', 'Cypress', 'Jasmine/Karma',
         ],
       },
       {
