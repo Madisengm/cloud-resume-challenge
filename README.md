@@ -1,6 +1,6 @@
 # ☁️ Cloud Resume Challenge — Mahlatse Madiseng
 
-[![Deploy to Azure Static Web Apps](https://github.com/YOUR_USERNAME/cloud-resume-challenge/actions/workflows/azure-static-web-apps-black-sky-08599bc03.yml/badge.svg)](https://github.com/YOUR_USERNAME/cloud-resume-challenge/actions)
+[![Deploy to Azure Static Web Apps](https://github.com/Madisengm/cloud-resume-challenge/blob/main/.github/workflows/azure-static-web-apps-black-sky-08599bc03.yml/badge.svg)](https://github.com/Madisengm/cloud-resume-challenge/actions)
 [![Azure](https://img.shields.io/badge/Azure-Static_Web_Apps-0078D4?logo=microsoftazure&logoColor=white)](https://black-sky-08599bc03.7.azurestaticapps.net)
 [![Angular](https://img.shields.io/badge/Angular-17+-DD0031?logo=angular&logoColor=white)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
