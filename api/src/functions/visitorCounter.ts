@@ -40,6 +40,14 @@ export async function visitorCounter(
         };
     } catch (error) {
         context.error("Cosmos DB error:", error);
+
+        context.log({
+            severity: 'error',
+            message: 'Cosmos DB operation failed',
+            error: error instanceof Error ? error.message : String(error),
+            url: request.url,
+        });
+
         return {
             status: 500,
             headers,
