@@ -91,7 +91,7 @@ export class App {
     workExperience: [
       {
         company: 'Verisec SA',
-        title: 'Frontend Engineer & Developer Support',
+        title: 'Frontend Engineer',
         years: '2023 - PRESENT',
         responsibilities: [
           'Architected and scaffolded enterprise Angular applications from the ground up, owning component structure, routing, state management, and API integration.',
